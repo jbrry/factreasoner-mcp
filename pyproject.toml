@@ -1,0 +1,18 @@
+[project]
+name = "factreasoner-mcp"
+version = "0.1.0"
+description = "FactReasoner MCP server with LiteLLM backend"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fact_reasoner",
+    "litellm",
+    "mellea==0.3.0",
+    "mcp[cli]>=1.0.0",
+    "python-dotenv",
+    "nest-asyncio>=1.6.0",
+]
+
+[tool.uv.sources]
+fact_reasoner = { git = "https://github.com/IBM/FactReasoner", branch = "fix/litellm-backend-chat-key" }
+litellm = { git = "https://github.com/jbrry/litellm", branch = "feat/top_logprobs_array" }
