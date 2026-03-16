@@ -83,7 +83,7 @@ Runs the full FactReasoner pipeline on a query/response pair.
 | `query` | str | — | The original prompt given to the LLM |
 | `response` | str | — | The LLM-generated response to assess |
 | `topic` | str | — | Main subject (guides retrieval) |
-| `retriever_type` | str | `"wikipedia"` | `"wikipedia"` or `"google"` |
+| `retriever_type` | str | `"google"` | `"wikipedia"` or `"google"` |
 | `model_id` | str | `watsonx/meta-llama/llama-3-3-70b-instruct` | LiteLLM model identifier |
 | `pipeline_version` | str | `"FR2"` | `"FR1"`, `"FR2"`, or `"FR3"` |
 | `top_k` | int | `5` | Contexts retrieved per atom |
