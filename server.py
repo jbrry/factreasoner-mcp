@@ -140,7 +140,7 @@ async def assess_factuality(
     query: str,
     response: str,
     topic: str,
-    retriever_type: str = "wikipedia",
+    retriever_type: str = "google",
     model_id: str = DEFAULT_MODEL_ID,
     pipeline_version: str = "FR2",
     top_k: int = 5,
@@ -154,7 +154,7 @@ async def assess_factuality(
         query: The original question or prompt given to the LLM.
         response: The LLM-generated response to assess.
         topic: The main subject of the response (used to guide retrieval).
-        retriever_type: Knowledge source — "wikipedia" (default), "google" (needs SERPER_API_KEY).
+        retriever_type: Knowledge source — "google" (default), "google" (needs SERPER_API_KEY).
         model_id: LiteLLM model identifier, e.g. "watsonx/meta-llama/llama-3-3-70b-instruct".
         pipeline_version: "FR1" (atom↔own contexts), "FR2" (atom↔all contexts, default),
                           or "FR3" (FR2 + context↔context).
